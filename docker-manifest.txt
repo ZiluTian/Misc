@@ -1,0 +1,45 @@
+Multi-arch feature of Docker 
+
+https://medium.com/@mauridb/docker-multi-architecture-images-365a44c26be6
+https://blog.docker.com/2017/11/multi-arch-all-the-things/
+
+Set $HOME/.docker/config.json
+{
+  "experimental": "enabled" 
+}
+
+Useful commands: 
+docker manifest create 
+docker manifest annotate 
+docker manifest push 
+docker manifest inspect 
+
+Created manifest zilutian/data-serving-server: 
+docker manifest inspect zilutian/data-serving-server
+{
+   "schemaVersion": 2,
+   "mediaType": "application/vnd.docker.distribution.manifest.list.v2+json",
+   "manifests": [
+      {
+         "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+         "size": 1988,
+         "digest": "sha256:7d5ca402144e7c56a958d9c5cc206163b03ad7458b1901a1c1b200396a463632",
+         "platform": {
+            "architecture": "arm64",
+            "os": "linux",
+            "variant": "v8"
+         }
+      },
+      {
+         "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+         "size": 1988,
+         "digest": "sha256:9e69e287a0b9b911041a080bbe1acdaef2fd39e576485481e624af46e7133759",
+         "platform": {
+            "architecture": "amd64",
+            "os": "linux"
+         }
+      }
+   ]
+}
+
+Use parsa cluster to push manifest list 
