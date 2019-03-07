@@ -8,6 +8,8 @@ Set $HOME/.docker/config.json
   "experimental": "enabled" 
 }
 
+# enable the experimental feature for docker cli, not daemon 
+
 Useful commands: 
 docker manifest create 
 docker manifest annotate 
