@@ -3,3 +3,6 @@ docker run -it --entrypoint /bin/bash client
 
 Linux Containers on Windows: 
 https://stefanscherer.github.io/sneak-peek-at-lcow/
+
+Go Concurrency model: 
+https://github.com/golang/go/wiki/LearnConcurrency
