@@ -1,3 +1,5 @@
 Overwrite entrypoint:
 docker run -it --entrypoint /bin/bash client
 
+Linux Containers on Windows: 
+https://stefanscherer.github.io/sneak-peek-at-lcow/
