@@ -12,3 +12,18 @@ https://www.cyberciti.biz/faq/unix-howto-read-line-by-line-from-file/
 
 Change perf mode: 
 sudo sh -c 'echo 0 > /proc/sys/kernel/perf_event_paranoid'
+
+Parallel bzip version: 
+https://linux.die.net/man/1/pbzip2
+pbzip2 -dckvm300 file_to_decompress > decompressed_file 
+
+Fast download (Aria2): 
+https://aria2.github.io/manual/en/html/aria2c.html?highlight=session
+
+Perf measure part of the program: 
+perf stat -e instructions:u,instructions:k,cycles --cpu $SERVER_CPUS -p $server_proc sleep infinity 2>>$PERFFILE &
+...
+pkill -fx "sleep infinity"
+
+Get the pid of a process based on certain pattern matching: 
+ps aux | grep solr-7.7.1 |tr ' ' '\n' | grep '[^[:blank:]]' | sed -n "2 p"
