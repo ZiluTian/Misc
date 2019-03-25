@@ -31,3 +31,6 @@ ps aux | grep *keyword* |tr ' ' '\n' | grep '[^[:blank:]]' | sed -n "2 p"
 Deal with ssh-key (origin: https://serverfault.com/questions/241588/how-to-automate-ssh-login-with-password) 
 ssh-keygen -t rsa -b 2048 
 ssh-copy-id id@server 
+
+Make a directory and cd into it 
+mkdir foo && cd $_ 
