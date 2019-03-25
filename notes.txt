@@ -26,4 +26,8 @@ perf stat -e instructions:u,instructions:k,cycles --cpu $SERVER_CPUS -p $server_
 pkill -fx "sleep infinity"
 
 Get the pid of a process based on certain pattern matching: 
-ps aux | grep solr-7.7.1 |tr ' ' '\n' | grep '[^[:blank:]]' | sed -n "2 p"
+ps aux | grep *keyword* |tr ' ' '\n' | grep '[^[:blank:]]' | sed -n "2 p"
+
+Deal with ssh-key (origin: https://serverfault.com/questions/241588/how-to-automate-ssh-login-with-password) 
+ssh-keygen -t rsa -b 2048 
+ssh-copy-id id@server 
