@@ -34,3 +34,6 @@ ssh-copy-id id@server
 
 Make a directory and cd into it 
 mkdir foo && cd $_ 
+
+Retrieve IP from cmd (source: https://tecadmin.net/check-ip-address-on-linux/)
+ip route get 1 | awk '{print $NF;exit}'
