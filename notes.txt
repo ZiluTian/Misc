@@ -37,3 +37,7 @@ mkdir foo && cd $_
 
 Retrieve IP from cmd (source: https://tecadmin.net/check-ip-address-on-linux/)
 ip route get 1 | awk '{print $NF;exit}'
+
+Services and packages 
+Installed services: ls /etc/init.d 
+Installed packages: apt list --installed 
