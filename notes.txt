@@ -41,3 +41,22 @@ ip route get 1 | awk '{print $NF;exit}'
 Services and packages 
 Installed services: ls /etc/init.d 
 Installed packages: apt list --installed 
+
+Java 
+Logging: 
+- https://www.loggly.com/ultimate-guide/java-logging-basics/
+- http://hanoo.org/index.php?article=how-to-generate-logs-in-java
+
+HTTP 
+https://www.theserverside.com/news/1365146/Redirect-After-Post
+https://softwareengineering.stackexchange.com/questions/99894/why-doesnt-http-have-post-redirect
+
+Nginx
+http://nginx.org/en/docs/beginners_guide.html
+use "fastcgi_param SCRIPT_FILENAME $request_filename" instead of "$document_root$fastcgi_script_name" to solve error such as  "href="http://HOST_IP/http://HOST_IP/http://HOST_IP/register"
+http://nginx.org/en/docs/debugging_log.html
+https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/
+
+Git
+Debug connection to github: GIT_CURL_VERBOSE=1 GIT_TRACE=1 git push 
+
