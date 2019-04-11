@@ -13,8 +13,10 @@ https://stefanscherer.github.io/sneak-peek-at-lcow/
 Go Concurrency model: 
 https://github.com/golang/go/wiki/LearnConcurrency
 
-Bash read file: 
+Bash: 
 https://www.cyberciti.biz/faq/unix-howto-read-line-by-line-from-file/
+https://www.shellscript.sh/trap.html
+https://stackoverflow.com/questions/9080431/how-execute-bash-script-line-by-line
 
 Change perf mode: 
 sudo sh -c 'echo 0 > /proc/sys/kernel/perf_event_paranoid'
