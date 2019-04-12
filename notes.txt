@@ -1,6 +1,7 @@
-Overwrite entrypoint:
+Docker 
 docker run -it --entrypoint /bin/bash client
-
+docker attach *containerID* 
+https://medium.com/kokster/mount-volumes-into-a-running-container-65a967bee3b5
 Manage Docker as a non-root user: 
 https://docs.docker.com/install/linux/linux-postinstall/
 sudo groupadd docker 
@@ -68,3 +69,6 @@ https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/
 Git
 Debug connection to github: GIT_CURL_VERBOSE=1 GIT_TRACE=1 git push 
 Add cred to .netrc: https://gist.github.com/technoweenie/1072829
+
+Solr
+https://medium.com/@sarkaramrit2/getting-different-results-while-issuing-a-query-multiple-times-in-solrcloud-632103096076
