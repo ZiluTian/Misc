@@ -72,3 +72,6 @@ Add cred to .netrc: https://gist.github.com/technoweenie/1072829
 
 Solr
 https://medium.com/@sarkaramrit2/getting-different-results-while-issuing-a-query-multiple-times-in-solrcloud-632103096076
+
+QEMU for architects
+http://events17.linuxfoundation.org/sites/events/files/slides/comparch-software-studies.pdf
