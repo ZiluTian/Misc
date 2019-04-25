@@ -1,0 +1,32 @@
+FROM ubuntu:16.04
+RUN sed -Ei 's/^# deb-src/deb-src/' /etc/apt/sources.list
+RUN apt-get update -qq
+RUN apt-get install -y \
+    build-essential checkinstall wget sudo \
+        python-dev software-properties-common \
+        pkg-config python-software-properties zip zlib1g-dev unzip libbz2-dev \
+        libtool git-core
+RUN apt-get --no-install-recommends -y build-dep qemu
+RUN mkdir -p /root/Downloads
+WORKDIR /root/Downloads
+RUN wget https://github.com/git-lfs/git-lfs/releases/download/v2.5.1/git-lfs-linux-amd64-v2.5.1.tar.gz
+RUN tar -xf git-lfs-linux-amd64-v2.5.1.tar.gz
+RUN chmod +x install.sh && ./install.sh && git lfs install | grep -q 'Git LFS initialized.'
+ENV GCC_VERSION "5"
+RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
+RUN apt-get update -qq
+RUN apt-get -y install gcc-${GCC_VERSION} g++-${GCC_VERSION}
+RUN update-alternatives --install /usr/bin/gcc gcc \
+    /usr/bin/gcc-${GCC_VERSION} 20
+RUN update-alternatives --install /usr/bin/g++ g++ \
+    /usr/bin/g++-${GCC_VERSION} 20
+RUN update-alternatives --config gcc
+RUN update-alternatives --config g++
+ENV BOOST "boost_1_59_0"
+ENV BOOST_VERSION "1.59.0"
+RUN wget http://sourceforge.net/projects/boost/files/boost/${BOOST_VERSION}/${BOOST}.tar.bz2 -O /tmp/${BOOST}.tar.gz
+RUN tar -xf /tmp/${BOOST}.tar.gz
+WORKDIR /root/Downloads/${BOOST}
+RUN ./bootstrap.sh --prefix=/usr/local
+RUN ./b2 -j8
+RUN ./b2 install
