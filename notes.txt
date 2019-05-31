@@ -82,3 +82,6 @@ Build-related
 https://msteveb.github.io/autosetup/user/outoftree/
 
 https://notes.shichao.io/
+
+Canterbury Corpus
+http://corpus.canterbury.ac.nz/
