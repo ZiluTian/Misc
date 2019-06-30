@@ -85,3 +85,10 @@ https://notes.shichao.io/
 
 Canterbury Corpus
 http://corpus.canterbury.ac.nz/
+
+Procedure Call Std for Arm64
+http://infocenter.arm.com/help/topic/com.arm.doc.ihi0055b/IHI0055B_aapcs64.pdf
+
+Cavium PMU
+https://www.marvell.com/documents/hrur6mybdvk5uki1w0z7/
+instruction issue queue refers to issue queue for uops at issue stage, not instruction queue 
